@@ -1,0 +1,640 @@
+@import "../nullcss/style.scss";
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&display=swap');
+
+@font-face {
+    font-family: proxima nova, sans-serif;
+    src: url(fonts/ProximaNova-Black.ttf);
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+@font-face {
+    font-family: proxima nova, sans-serif;
+    src: url(fonts/ProximaNova-Bold.ttf);
+    font-style: normal; 
+    font-weight: bold; 
+}
+
+body, html {
+    font-family: proxima nova, sans-serif;
+    background: #162831;
+    color: #ffffff;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.container {
+    max-width: 1330px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    padding-top: 30px;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        height: 60px;
+        width: 60px;
+    }
+
+    &__button {
+        color: #FFFFFF;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 140%;
+        padding: 10px 15px;
+        background: #018ABE;
+        border-radius: 3px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+.menu {
+    margin-top: 20px;
+    &__list {
+        display: flex;
+    }
+
+    & li {
+        margin-left: 50px;
+    }
+
+    & li:last-child {
+        padding-right: 15px;
+    }
+
+    &__link {
+        color: #ffffff;
+        
+    }
+}
+
+.content {
+    flex: 1 1 auto;
+}
+
+.start-screen {
+    margin-top: 50px;
+
+    &__card {
+        min-height: 600px;
+        background: url(img/img_1.jpg)0 0/ 100% 100% no-repeat;
+        border-radius: 10px;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+    }
+
+    &__subtitle {
+        font-family: 'El Messiri', sans-serif;
+        font-size: 24px;
+        line-height: 140%;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &__subtitle::before {
+        content: url(img/icon/left_1.svg);
+        margin-right: 66px;
+    }
+
+    &__subtitle::after {
+        content: url(img/icon/right_1.svg);
+        margin-left: 66px;
+    }
+
+    &__title {
+        text-align: center;
+        width: 600px;
+        font-family: 'El Messiri', sans-serif;
+        font-weight: 700;
+        line-height: 140%;
+        font-size: 64px;
+    }
+}
+
+.title {
+    font-family: 'El Messiri';
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 140%;
+}
+
+.title::before {
+    content: url(img/icon/left_2.svg);
+    margin-right: 45px;
+}
+
+.title::after {
+    content: url(img/icon/right_2.svg);
+    margin-left: 45px;
+}
+
+.sessions {
+    margin-top: 150px;
+    margin-bottom: 150px;
+
+    &__title {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &__row {
+        margin-top: 100px;
+        display: flex;
+        margin-left: -24px;
+        margin-right: -24px;
+    }
+
+    &__row-first {
+        flex: 0 1 33.333%;
+        padding: 0 24px;
+    }
+
+    &__row-second {
+        flex: 0 1 66.666%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -12px;
+    }
+
+    &__row-third {
+        flex: 0 1 50%;
+        padding: 0px 12px 24px 12px;
+    }
+
+    &__border {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+    }
+
+    &__border:hover {
+        border-bottom: 10px solid #018ABE;
+        border-radius: 12px;
+        
+    }
+
+    &__card-first {
+        position: relative;
+        background: url(img/img_2.jpg)0 0/ 100% 100% no-repeat;
+        border-radius: 12px;
+        height: 540px;
+    }
+
+    &__card {
+        position: relative;
+        background: url(img/img_3.jpg)0 0/ 100% 100% no-repeat;
+        border-radius: 12px;
+        height: 258px;
+    }
+
+    & p {
+        width: 350px;
+        font-family: 'El Messiri';
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 140%;
+        font-style: normal;
+    }
+
+    &__text {
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+    }
+
+    &__text-2 {
+        position: absolute;
+        bottom: 30px;
+        left: 40px;
+    }
+
+    &__link {
+        color: #FFFFFF;
+    }
+}
+
+.feedback {
+    &__title {
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+}
+
+.slider {
+    &__item {
+        text-align: center;
+        opacity: 0.4;
+        transition: all 0.3s ease 0s;
+        background: #018ABE;
+        margin: 0 25px 60px 25px;
+        border-radius: 10px;
+    }
+
+    &__text {
+        margin: 0 auto;
+        padding: 0 10px 0 10px;
+        margin-bottom: 60px;
+    }
+}
+
+/* Слайдер */
+.slick-slider{
+    margin-bottom: 150px;
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{
+
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{
+
+}
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+}
+/* Слайд */
+.slick-slide{
+    
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{
+    align-self: center;
+    min-width: 500px;
+    min-height: 276px;
+
+    & .slider__text {
+        max-width: 410px;
+    }
+
+    & h3, p {
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    & h3 {
+        margin-top: 40px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 140%;
+    }
+
+    & p {
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 140%;
+    }
+}
+/* Слайд основной */
+.slick-slide.slick-current{
+    min-width: 640px;
+    min-height: 350px;
+
+    & .slider__text {
+        max-width: 520px;
+    }
+
+    & h3, p {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    & h3 {
+        margin-top: 50px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 140%;
+    }
+
+    & p {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 140%;
+    }
+}
+/* Слайд по центру */
+.slick-slide.slick-center{
+    opacity: 1;
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{
+    align-self: center;
+    min-width: 500px;
+    min-height: 276px;
+
+    & .slider__text {
+        max-width: 410px;
+    }
+
+    & h3, p {
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    & h3 {
+        margin-top: 40px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 140%;
+    }
+
+    & p {
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 140%;
+    }
+}
+/* Стрелка */
+.slick-arrow{
+
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev{
+
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next{
+
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{
+
+}
+/* Точки (булиты) */
+.slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slick-dots li{
+    list-style: none;
+    margin: 0 20px;
+}
+/* Активная точка */
+.slick-dots li.slick-active{
+    font-size: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    background-color: #fff;
+}
+/* Элемент точки */
+.slick-dots li button{
+    font-size: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    background-color: #fff;
+    opacity: 0.4;
+}
+
+.about-us {
+    &__title {
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__block {
+        display: flex;
+        margin-bottom: 100px;
+        justify-content: space-around;
+    }
+}
+
+.block-1 {
+
+    &__text {
+        max-width: 480px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__title {
+        font-weight: 700;
+        line-height: 140%;
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    &__article {
+        font-weight: 300;
+        line-height: 140%;
+        font-size: 16px;
+    }
+
+    &__article.p {
+        margin-bottom: 20px;
+    }
+
+    &__image {
+        height: 365px;
+    }
+
+    &__image img {
+        border-radius: 14px;
+        height: 100%;
+    }
+}
+
+.block-2 {
+    margin-bottom: 150px;
+    &__image {
+        height: 400px;
+    }
+
+    &__image img {
+        border-radius: 14px;
+        height: 100%;
+    }
+}
+
+.price {
+    margin-bottom: 150px;
+
+    &__title {
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__lists {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 500px;
+    }
+
+    &__list li::before {
+        content: url(img/icon/left_3.svg);
+        margin-right: 20px;
+    }
+
+    &__list li {
+        margin-bottom: 32px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+    }
+
+    &__list-2 li {
+        font-family: 'El Messiri';
+        margin-bottom: 32px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+    }
+
+    &__image {
+        margin-bottom: 30px;
+    }
+
+    &__image img {
+        border-radius: 14px;
+    }
+
+    &__description {
+        font-family: 'El Messiri';
+        font-size: 21px;
+        line-height: 140%;
+        font-weight: 700;
+        text-align: center;
+    }
+}
+
+.contact-us {
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__map {
+        flex: 0 1 66.666%;
+        margin: 0 -24px;
+        padding: 0 24px;
+    }
+
+    &__map iframe {
+        border-radius: 10px;
+    }
+
+    &__location {
+        
+        flex: 0 1 33.333%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__card {
+        flex: 0 1 50%;
+        background: #018ABE;
+        border-radius: 10px;
+
+        &_align {
+            margin: 35px 45px;
+        }
+    }
+
+    &__card.first {
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        font-family: 'El Messiri';
+        font-size: 24px;
+        line-height: 140%;
+        font-weight: 700;
+        margin-bottom: 21px;
+    }
+
+    &__list {
+        font-weight: 400;
+        line-height: 135%;
+        font-size: 14px;
+    }
+
+    &__list li {
+        margin-bottom: 20px;
+    }
+
+    &__list li:last-child {
+        margin-bottom: 40px;
+    }
+
+    &__list li:first-child::before {
+        content: url(img/icon/map.svg);
+        margin-right: 20px;
+    }
+
+    &__list li:nth-child(2)::before {
+        content: url(img/icon/metro.svg);
+        margin-right: 20px;
+    }
+
+    &__list li:last-child::before {
+        content: url(img/icon/calendar.svg);
+        margin-right: 20px;
+    }
+
+    &__button {
+        font-weight: 600;
+        line-height: 140%;
+        font-size: 13px;
+        color: #018ABE;
+        padding: 10px 15px;
+        background: #FFFFFF;
+        border-radius: 3px;
+    }
+}
+
+.footer {
+    margin-top: 90px;
+    margin-bottom: 30px;
+    
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__author {
+        font-weight: 700;
+        line-height: 135%;
+        font-size: 14px;
+    }
+}
