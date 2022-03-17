@@ -5,5 +5,6 @@ $(document).ready(function () {
         slidesToShow: 3,
         whaitForAnimate: false,
         centerMode: true,
+        variableWidth: true,
     });
 });

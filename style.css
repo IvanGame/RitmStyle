@@ -91,6 +91,7 @@ body, html {
   background: #162831;
   color: #ffffff;
   height: 100%;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -344,19 +345,17 @@ body, html {
 }
 
 .slider__item {
-  text-align: center;
   opacity: 0.4;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   background: #018ABE;
-  margin: 0 25px 60px 25px;
+  margin: 0 0px 60px 0px;
   border-radius: 10px;
 }
 
 .slider__text {
-  margin: 0 auto;
   padding: 0 10px 0 10px;
-  margin-bottom: 60px;
+  margin: 0px 30px 60px 30px;
 }
 
 /* Слайдер */
@@ -379,17 +378,46 @@ body, html {
 }
 
 /* Слайд */
+.slick-slide {
+  margin: 0 26px 60px 26px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.slick-slide .slider__text {
+  padding: 0px 15px;
+  max-width: 470px;
+}
+
+.slick-slide h3, .slick-slide p {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.slick-slide h3 {
+  margin-top: 40px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.slick-slide p {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 140%;
+}
+
 /* Слайд активный (показывается) */
 .slick-slide.slick-active {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  min-width: 500px;
-  min-height: 276px;
 }
 
 .slick-slide.slick-active .slider__text {
-  max-width: 410px;
+  padding: 0px 15px;
+  max-width: 470px;
 }
 
 .slick-slide.slick-active h3, .slick-slide.slick-active p {
@@ -412,12 +440,12 @@ body, html {
 
 /* Слайд основной */
 .slick-slide.slick-current {
-  min-width: 640px;
-  min-height: 350px;
+  opacity: 1;
 }
 
 .slick-slide.slick-current .slider__text {
-  max-width: 520px;
+  padding: 0px 30px;
+  max-width: 580px;
 }
 
 .slick-slide.slick-current h3, .slick-slide.slick-current p {
@@ -448,12 +476,11 @@ body, html {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  min-width: 500px;
-  min-height: 276px;
 }
 
 .slick-slide.slick-cloned .slider__text {
-  max-width: 410px;
+  padding: 0px 15px;
+  max-width: 470px;
 }
 
 .slick-slide.slick-cloned h3, .slick-slide.slick-cloned p {

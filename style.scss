@@ -20,6 +20,7 @@ body, html {
     background: #162831;
     color: #ffffff;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -242,19 +243,18 @@ body, html {
 }
 
 .slider {
+
     &__item {
-        text-align: center;
         opacity: 0.4;
         transition: all 0.3s ease 0s;
         background: #018ABE;
-        margin: 0 25px 60px 25px;
+        margin: 0 0px 60px 0px;
         border-radius: 10px;
     }
 
     &__text {
-        margin: 0 auto;
         padding: 0 10px 0 10px;
-        margin-bottom: 60px;
+        margin: 0px 30px 60px 30px;
     }
 }
 
@@ -280,16 +280,42 @@ body, html {
 }
 /* Слайд */
 .slick-slide{
+    margin: 0 26px 60px 26px;
+     align-self: center;
+    
+
+    & .slider__text {
+        padding: 0px 15px;
+        max-width: 470px;
+    }
+
+    & h3, p {
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    & h3 {
+        margin-top: 40px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 140%;
+    }
+
+    & p {
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 140%;
+    } 
     
 }
 /* Слайд активный (показывается) */
 .slick-slide.slick-active{
     align-self: center;
-    min-width: 500px;
-    min-height: 276px;
+    
 
     & .slider__text {
-        max-width: 410px;
+        padding: 0px 15px;
+        max-width: 470px;
     }
 
     & h3, p {
@@ -312,11 +338,10 @@ body, html {
 }
 /* Слайд основной */
 .slick-slide.slick-current{
-    min-width: 640px;
-    min-height: 350px;
-
+    opacity: 1;
     & .slider__text {
-        max-width: 520px;
+        padding: 0px 30px;
+        max-width: 580px;
     }
 
     & h3, p {
@@ -344,11 +369,10 @@ body, html {
 /* Клонированный слайд */
 .slick-slide.slick-cloned{
     align-self: center;
-    min-width: 500px;
-    min-height: 276px;
-
+    
     & .slider__text {
-        max-width: 410px;
+        padding: 0px 15px;
+        max-width: 470px;
     }
 
     & h3, p {
