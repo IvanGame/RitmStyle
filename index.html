@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RitmStyle</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="start">
         <header class="header">
             <div class="container">
                 <div class="header__row">
@@ -22,13 +22,13 @@
                     </div>
                     <div class="header__menu menu">
                         <ul class="menu__list">
-                            <li><a href="#" class="menu__link">Главная</a></li>
-                            <li><a href="#" class="menu__link">Сеансы</a></li>
-                            <li><a href="#" class="menu__link">Отзывы</a></li>
-                            <li><a href="#" class="menu__link">Контакты</a></li>
-                            <li><a href="#" class="menu__link">Новости</a></li>
-                            <li><a href="#" class="menu__link">Обо мне</a></li>
-                            <li><a href="#" class="menu__link">Блог</a></li>
+                            <li><a href="index.html" class="menu__link">Главная</a></li>
+                            <li><a data-goto=".page-section-1" href="#" class="menu__link">Сеансы</a></li>
+                            <li><a data-goto=".page-section-2" href="#" class="menu__link">Отзывы</a></li>
+                            <li><a data-goto=".page-section-3" href="#" class="menu__link">Контакты</a></li>
+                            <li><a href="news.html" class="menu__link">Новости</a></li>
+                            <li><a data-goto=".page-section-4" href="#" class="menu__link">Обо мне</a></li>
+                            <li><a href="blog.html" class="menu__link">Блог</a></li>
                         </ul>
                     </div>
                     <a href="#" class="header__button">Записаться на сеанс</a>
@@ -51,7 +51,7 @@
                     </div>
                 </div>
             </div>
-            <div class="sessions">
+            <div class="sessions page-section-1">
                 <div class="container">
                     <div class="sessions__title title">
                         Сеансы RitmStyle
@@ -107,7 +107,7 @@
                     </div>
                 </div>
             </div>
-            <div class="feedback">
+            <div class="feedback page-section-2">
                 <div class="feedback__title title">
                     Отзывы
                 </div>
@@ -198,7 +198,7 @@
                     </div>
                 </div>
             </div>
-            <div class="about-us">
+            <div class="about-us page-section-4">
                 <div class="container">
                     <div class="about-us__title title">
                         Об RitmStyle
@@ -290,7 +290,7 @@
                     </div>
                 </div>
             </div>
-            <div class="contac-us">
+            <div class="contac-us page-section-3">
                 <div class="container">
                     <div class="contact-us__row">
                         <div class="contact-us__map">
@@ -325,6 +325,12 @@
                     </div>
                 </div>
             </div>
+            <div id="back_to_top" class="back-to-top">
+                <svg xmlns="http://www.w3.org/2000/svg" style="transform: rotate(270deg);" fill="#ffffff" width=" 24"
+                    height="24" viewBox="0 0 24 24">
+                    <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+                </svg>
+            </div>
         </main>
         <footer class="footer">
             <div class="container">
@@ -338,10 +344,10 @@
                 </div>
             </div>
         </footer>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="js/script.js"></script>
-        <script src="js/slick.min.js"></script>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slick.min.js"></script>
 </body>
 
 </html>

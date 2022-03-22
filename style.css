@@ -91,7 +91,6 @@ body, html {
   background: #162831;
   color: #ffffff;
   height: 100%;
-  overflow-x: hidden;
 }
 
 .wrapper {
@@ -103,6 +102,7 @@ body, html {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 .container {
@@ -815,6 +815,25 @@ body, html {
   font-size: 14px;
 }
 
+.back-to-top {
+  background: #00a6ff;
+  border-radius: 50%;
+  position: fixed;
+  bottom: -50px;
+  padding: 10px 12px;
+  right: 50px;
+  cursor: pointer;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  border: 2px solid #ffffff;
+}
+
+.back-to-top.active {
+  bottom: 50px;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
 @media (max-width: 1024px) {
   .sessions {
     margin-bottom: 80px;
@@ -894,23 +913,31 @@ body, html {
     z-index: 3;
   }
   .header__button {
+    position: fixed;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     z-index: 3;
-    display: none;
+    top: -50px;
+    left: 140px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
   .header__button.active {
+    top: 20px;
     display: block;
     padding: 10px 15px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
   .menu {
     position: fixed;
-    top: -103%;
+    overflow: auto;
+    top: -105%;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #012436;
+    background-color: rgba(1, 36, 54, 0.9);
     -webkit-transition: 0.3s;
     transition: 0.3s;
     padding-top: 120px;
@@ -928,6 +955,15 @@ body, html {
   }
   .menu__link {
     font-size: 24px;
+  }
+  .menu.active::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 70px;
+    background-color: #012436;
   }
   .menu.active {
     z-index: 1;
@@ -1047,7 +1083,6 @@ body, html {
   }
   .header__button.active {
     display: block;
-    padding: 5px 10px;
   }
   .start-screen__card {
     background-image: none;
